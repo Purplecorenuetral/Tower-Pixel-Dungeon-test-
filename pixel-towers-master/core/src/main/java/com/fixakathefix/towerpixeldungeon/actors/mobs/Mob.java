@@ -996,7 +996,7 @@ public abstract class Mob extends Char {
 	@Override
 	public void die( Object cause ) {
 
-		if (alignment==Alignment.ENEMY&&EXP>=1&&maxLvl>=1&&buff(Minion.class)==null&&buff(MinionBoss.class)==null) Dungeon.gold += 3*EXP + 1;// Foes add up to gold
+		if (alignment==Alignment.ENEMY&&EXP>=1&&maxLvl>=1&&buff(Minion.class)==null&&buff(MinionBoss.class)==null) Dungeon.gold += 6*EXP + 4;// Foes add up to gold
 		updateQuickslot();
 		if (buff(ChampionEnemy.Rejuvenating.class)!=null){
 			for (int i : PathFinder.NEIGHBOURS25){
