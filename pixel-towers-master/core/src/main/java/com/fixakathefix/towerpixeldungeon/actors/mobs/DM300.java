@@ -541,7 +541,7 @@ public class DM300 extends Mob {
 		Dungeon.level.unseal();
 
 		//60% chance of 2 shards, 30% chance of 3, 10% chance for 4. Average of 2.5
-		int shards = Random.chances(new float[]{0, 0, 6, 3, 1});
+		int shards = Random.chances(new float[]{0, 0, 3, 3, 4});
 		for (int i = 0; i < shards; i++){
 			int ofs;
 			do {

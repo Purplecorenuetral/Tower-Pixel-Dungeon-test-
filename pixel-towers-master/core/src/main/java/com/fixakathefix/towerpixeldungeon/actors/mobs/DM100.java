@@ -63,7 +63,7 @@ public class DM100 extends Mob implements Callback {
 		ranged = true;
 
 		loot = new LiquidMetal();
-		lootChance = 0.03f;
+		lootChance = 0.35f;
 	}
 	
 	@Override

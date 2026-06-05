@@ -45,7 +45,7 @@ public class DM201 extends DM200 {
 
 		HUNTING = new Mob.Hunting();
 		loot = new LiquidMetal();
-		lootChance = 0.05f;
+		lootChance = 0.55f;
 	}
 
 	@Override
