@@ -131,10 +131,10 @@ public class Shopkeeper extends NPC {
 	public static int sellPrice(Item item){
 		if (Dungeon.depth==10 && Dungeon.level.mode == WndModes.Modes.CHALLENGE && item instanceof TowerSpawner) return item.value() * 10;
 
-		if (item instanceof EquipableItem || item instanceof Wand) return item.cursed ? (int)(item.value() * (3 + Dungeon.depth*0.08f)) : (int)(item.value() * (5 + Dungeon.depth*0.1f));
-		if (item instanceof ScrollOfUpgrade) return (int)(item.value() * (4 +  Dungeon.depth * 0.35f))/10 * 10;
-		if (item instanceof Potion || item instanceof Scroll || item instanceof Runestone || item instanceof Food || item instanceof Bomb || item instanceof Spell) return (int)(item.value() * (3 +  Dungeon.depth * 0.25f))/10 * 10;
-		if (item instanceof LiquidMetal) return (int)(item.value() * (7 + Dungeon.depth*0.25f));
+		if (item instanceof EquipableItem || item instanceof Wand) return (item.cursed ? (int)(item.value() * (3 + Dungeon.depth*0.08f)) : (int)(item.value() * (5 + Dungeon.depth*0.1f))) * 2;
+		if (item instanceof ScrollOfUpgrade) return ((int)(item.value() * (4 +  Dungeon.depth * 0.35f))/10 * 10) * 2;
+		if (item instanceof Potion || item instanceof Scroll || item instanceof Runestone || item instanceof Food || item instanceof Bomb || item instanceof Spell) return ((int)(item.value() * (3 +  Dungeon.depth * 0.25f))/10 * 10) * 2;
+		if (item instanceof LiquidMetal) return (int)(item.value() * (7 + Dungeon.depth*0.25f)) * 2;
 		return item.value() * 5;
 	}
 	
